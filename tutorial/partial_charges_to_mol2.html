@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Adding partial charges to mol2 files &mdash; Fluordynamics 0.1.0 documentation</title>
+  <title>Adding partial charges to mol2 files &mdash; fluordynamics 0.1.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Fluordynamics
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fluordynamics
           
 
           
@@ -133,7 +133,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Fluordynamics</a>
+          <a href="../index.html">fluordynamics</a>
         
       </nav>
 
@@ -192,21 +192,35 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -307,7 +321,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -373,6 +387,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -504,8 +519,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<tr><td><p><img alt="04dc27a4b3b14a2c86ab958b1553e4c1" class="no-scaled-link" src="../_images/DA_DT.png" style="width: 500px;" /></p>
-</td><td><p><img alt="09f57c16a3914625a2bd492738cf6e79" class="no-scaled-link" src="../_images/DG_DC.png" style="width: 500px;" /></p>
+<tr><td><p><img alt="0b5b8f5b972842e8a5555a2320cfc7b6" class="no-scaled-link" src="../_images/DA_DT.png" style="width: 500px;" /></p>
+</td><td><p><img alt="4b09023e0cbd48eba2f806089bc22ce3" class="no-scaled-link" src="../_images/DG_DC.png" style="width: 500px;" /></p>
 </td></tr><p>Use the <code class="docutils literal notranslate"><span class="pre">fd.ff.pandasMol2_replace()</span></code> function to add the <code class="docutils literal notranslate"><span class="pre">charge</span></code> column of the rtp file into the mol2 file. The <code class="docutils literal notranslate"><span class="pre">atom_name</span></code> column is used as the comparing index.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -584,7 +599,7 @@ File already exists, do not overwrite
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2020, Fabio D. Steffen
+        &copy; Copyright 2020, Fabio D. Steffen, University of Zurich
 
     </p>
   </div>
