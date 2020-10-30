@@ -94,7 +94,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"> Fluordynamics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluordynamics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -104,7 +104,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Code</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module.html">Module description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_ff.html">Force field parameterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_fluorbursts.html">Fluorburst</a></li>
 </ul>
 <p class="caption"><span class="caption-text">References</span></p>
 <ul>
@@ -155,7 +156,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li> Fluordynamics</li>
+      <li>Fluordynamics</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -198,40 +199,34 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="logo-fluordynamics">
-<h1><a class="reference internal" href="_images/fluordynamics_logo.png"><img alt="logo" src="_images/fluordynamics_logo.png" style="width: 50px;" /></a> Fluordynamics<a class="headerlink" href="#logo-fluordynamics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fluordynamics">
+<h1>Fluordynamics<a class="headerlink" href="#fluordynamics" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/graphical_abstract.png"><img alt="_images/graphical_abstract.png" class="align-center" src="_images/graphical_abstract.png" style="width: 100pc;" /></a>
+<div class="section" id="what-is-in-the-box">
+<h2>What is in the box?<a class="headerlink" href="#what-is-in-the-box" title="Permalink to this headline">¶</a></h2>
+<p><em>Fluordynamics</em> simplifies the workflow of setting up, running and evaluating Molecular dynamics simulations with extrinsic organic fluorophores for <em>in silico</em> FRET calculations.</p>
 <div class="section" id="interactive-fragment-generation">
 <h3>Interactive fragment generation<a class="headerlink" href="#interactive-fragment-generation" title="Permalink to this headline">¶</a></h3>
-<p>Fluordynamics is a package for setting up and running Molecular dynamics simulations with extrinsic organic fluorophores. The eponymous Python module allows to build new fragments (base, linker and dye) interactively. It integrates into PyMOL such that the molecular viewer can be controlled directly from a Jupyter notebook. The module also features a dedicated PyMOL plugin called <em>Fluorlabel</em> to attach the new fragments to the nucleic acid of interest.</p>
+<p>The Python module allows to build new fragments (base, linker and dye) <strong>interactively</strong>. It integrates into PyMOL such that the molecular viewer can be controlled directly from a <strong>Jupyter notebook</strong>. The module also features a dedicated <strong>PyMOL plugin</strong> called <em>Fluorlabel</em> to attach the new fragments to a nucleic acid of interest with the click of a button.</p>
 </div>
 <div class="section" id="patching-amber-force-fields">
 <h3>Patching AMBER force fields<a class="headerlink" href="#patching-amber-force-fields" title="Permalink to this headline">¶</a></h3>
-<p>Together with established pipelines for topology generation such as <em>Antechamber</em> and <em>Acpype</em>, Fluordynamics patches existing Gromacs ports of the AMBER force fields (including AMBERDYES, Graen et al. JCTC, 2014) with the newly generated fragment parameters.</p>
+<p>Together with established pipelines for topology generation such as <em>Antechamber</em> and <em>Acpype</em>, Fluordynamics patches existing <strong>Gromacs</strong> ports of the AMBER force fields (including AMBERDYES) with new fragment parameters.</p>
 </div>
-<div class="section" id="md-simulation-setup">
-<h3>MD simulation setup<a class="headerlink" href="#md-simulation-setup" title="Permalink to this headline">¶</a></h3>
-<p>The package further includes run files for setting up molecular dynamics simulations in Gromacs.</p>
+<div class="section" id="in-silico-fret">
+<h3><em>in silico</em> FRET<a class="headerlink" href="#in-silico-fret" title="Permalink to this headline">¶</a></h3>
+<p>On top of the MD trajectories, photon bursts are computed allowing to simulate a FRET experiment.</p>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="download-and-install">
 <h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
 <p>Install fluordynamics from Github with pip</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fdsteffen</span><span class="o">/</span><span class="n">fluordynamics</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<p>Make sure you have two following Python dependencies installed:</p>
-<ul class="simple">
-<li><p>numpy</p></li>
-<li><p>pandas</p></li>
-<li><p>biopandas</p></li>
-</ul>
 <p>To generate your own fragments you may further need:</p>
 <ul>
 <li><p><em>PyMOL</em> <a class="reference external" href="https://pymol.org/2/#download">https://pymol.org/2/#download</a></p></li>
@@ -248,15 +243,20 @@
 <li><p>A quantum chemistry package such as <em>Gaussian</em> <a class="reference external" href="https://gaussian.com/">https://gaussian.com/</a> or <em>GAMESS</em> <a class="reference external" href="https://www.msg.chem.iastate.edu/gamess/">https://www.msg.chem.iastate.edu/gamess/</a></p></li>
 </ul>
 </div>
+<hr class="docutils" />
 <div class="section" id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="label-your-nucleic-acid">
-<h3>Label your nucleic acid<a class="headerlink" href="#label-your-nucleic-acid" title="Permalink to this headline">¶</a></h3>
-<p>See the quick intro to the <a class="reference internal" href="fluorlabel.html"><span class="doc">PyMOL plugin</span></a></p>
+<div class="section" id="want-to-label-your-nucleic-acid-in-silico">
+<h3>Want to label your nucleic acid <em>in silico</em>?<a class="headerlink" href="#want-to-label-your-nucleic-acid-in-silico" title="Permalink to this headline">¶</a></h3>
+<p><span class="raw-html">&rarr;</span> See the quick intro to the <a class="reference internal" href="fluorlabel.html"><span class="doc">PyMOL plugin</span></a></p>
 </div>
-<div class="section" id="build-your-own-fragment">
-<h3>Build your own fragment<a class="headerlink" href="#build-your-own-fragment" title="Permalink to this headline">¶</a></h3>
-<p>Visit one of the <a class="reference internal" href="fragment_building.html"><span class="doc">tutorials</span></a></p>
+<div class="section" id="extend-the-labeling-portfolio-and-build-your-own-linker-fragments">
+<h3>Extend the labeling portfolio and build your own linker fragments?<a class="headerlink" href="#extend-the-labeling-portfolio-and-build-your-own-linker-fragments" title="Permalink to this headline">¶</a></h3>
+<p><span class="raw-html">&rarr;</span> Visit one of the <a class="reference internal" href="fragment_building.html"><span class="doc">tutorials</span></a></p>
+</div>
+<div class="section" id="you-have-an-md-trajectory-and-want-to-calculate-fret">
+<h3>You have an MD trajectory and want to calculate FRET?<a class="headerlink" href="#you-have-an-md-trajectory-and-want-to-calculate-fret" title="Permalink to this headline">¶</a></h3>
+<p><span class="raw-html">&rarr;</span> Check out the <a class="reference internal" href="fluorburst.html"><span class="doc">Fluorburst tutorial</span></a></p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
